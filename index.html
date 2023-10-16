@@ -24,14 +24,13 @@
                 <p>Cliquez pour en savoir plus</p>
         </div>
 
-         <div class="dropzone-card" onclick="Redirection('dropzone1.html')">   
+         <div class="dropzone-card" onclick="openModal('dropzone2.html')">
             <h2>Dropzone 2</h2>
             <p>Description de la dropzone 2.</p>
             <p>Cliquez pour en savoir plus</p>
         </div>
 
         <div class="dropzone-card" onclick="Redirection('dropzone1.html')"> 
-
             <h2>Dropzone 3</h2>
             <p>Description de la dropzone 3.</p>
             <p>Cliquez pour en savoir plus</p>
@@ -55,6 +54,14 @@
             <p>Cliquez pour en savoir plus</p>
         </div>
     
+    </div>
+
+    <!-- Fenêtre modale -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="modal-iframe" width="100%" height="400" frameborder="0"></iframe>
+        </div>
     </div>
 
 <script type="text/javascript" src="script.js"></script>
