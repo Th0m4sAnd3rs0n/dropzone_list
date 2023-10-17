@@ -9,10 +9,16 @@
 
 <body>
     <header>
-        <h1>Skydata</h1>
+        <h1>DZ list</h1>
         <p>Comparez les dropzones francaise</p>
     </header>
 
+     <!-- Sélecteur pour le type de vue -->
+     <select class="view-selector" onchange="changeView(this)" autocomplete="off">
+        <option value="mosaic">Mozaïque</option>
+        <option value="map">Map</option> 
+    </select>
+    
     <div class="mosaic">
         
         <!-- Dropzones -->
