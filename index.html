@@ -24,44 +24,105 @@
         <!-- Dropzones -->
         <!-- Redirection à l'aide d'un script pour ne pas avoir à imbriquer la carte dans un lien a et rendre toute la carte cliquable -->
         
-        <div class="dropzone-card" onclick="Redirection('dropzone1.html')">  
-                <h2>Dropzone 1</h2>
-                <p>Description de la dropzone 1.</p>
+        
+        <div class="dropzone-card" onclick="openModal('dropzone2.html')">
+            <div class="dropzone-inner">
+              <div class="dropzone-front">
+                  <h2>Dropzone 1</h2>
+                  <p>Description de la dropzone 1.</p>
+                  <p>Cliquez pour en savoir plus</p>
+              </div>
+              <div class="dropzone-back">
+                <!-- Informations supplémentaires sur la dropzone -->
+              <p>Informations supplémentaire</p>
+              <p>Avion : Pilatus PC6 + Twin Otter</p>
+              <p>Installations: Piscine, logement, etc.</p>
+              </div>
+            </div>
+      </div>
+
+        <div class="dropzone-card" onclick="openModal('dropzone2.html')">
+            <div class="dropzone-inner">
+            <div class="dropzone-front">
+                <h2>Dropzone 2</h2>
+                <p>Description de la dropzone 2.</p>
                 <p>Cliquez pour en savoir plus</p>
+            </div>
+            <div class="dropzone-back">
+                <!-- Informations supplémentaires sur la dropzone -->
+            <p>Informations supplémentaire</p>
+            <p>Avion : Pilatus PC6 + Twin Otter</p>
+            <p>Installations: Piscine, logement, etc.</p>
+            </div>
+            </div>
         </div>
 
-         <div class="dropzone-card" onclick="openModal('dropzone2.html')">
-            <h2>Dropzone 2</h2>
-            <p>Description de la dropzone 2.</p>
-            <p>Cliquez pour en savoir plus</p>
-        </div>
+        <div class="dropzone-card" onclick="openModal('dropzone2.html')">
+            <div class="dropzone-inner">
+              <div class="dropzone-front">
+                  <h2>Dropzone 3</h2>
+                  <p>Description de la dropzone 3.</p>
+                  <p>Cliquez pour en savoir plus</p>
+              </div>
+              <div class="dropzone-back">
+                <!-- Informations supplémentaires sur la dropzone -->
+              <p>Informations supplémentaire</p>
+              <p>Avion : Pilatus PC6 + Twin Otter</p>
+              <p>Installations: Piscine, logement, etc.</p>
+              </div>
+            </div>
+      </div>
 
-        <div class="dropzone-card" onclick="Redirection('dropzone1.html')"> 
-            <h2>Dropzone 3</h2>
-            <p>Description de la dropzone 3.</p>
-            <p>Cliquez pour en savoir plus</p>
+      <div class="dropzone-card" onclick="openModal('dropzone2.html')">
+        <div class="dropzone-inner">
+          <div class="dropzone-front">
+              <h2>Dropzone 4</h2>
+              <p>Description de la dropzone 4.</p>
+              <p>Cliquez pour en savoir plus</p>
+          </div>
+          <div class="dropzone-back">
+            <!-- Informations supplémentaires sur la dropzone -->
+          <p>Informations supplémentaire</p>
+          <p>Avion : Pilatus PC6 + Twin Otter</p>
+          <p>Installations: Piscine, logement, etc.</p>
+          </div>
         </div>
+  </div>
 
-         <div class="dropzone-card" onclick="Redirection('dropzone1.html')"> 
-            <h2>Dropzone 4</h2>
-            <p>Description de la dropzone 4.</p>
-            <p>Cliquez pour en savoir plus</p>
-        </div>
-
-         <div class="dropzone-card" onclick="Redirection('dropzone1.html')"> 
-            <h2>Dropzone 5</h2>
-            <p>Description de la dropzone 5.</p>
-            <p>Cliquez pour en savoir plus</p>
-        </div>
-
-         <div class="dropzone-card" onclick="Redirection('dropzone1.html')">
-            <h2>Dropzone 6</h2>
-            <p>Description de la dropzone 6.</p>
-            <p>Cliquez pour en savoir plus</p>
-        </div>
-    
+  <div class="dropzone-card" onclick="openModal('dropzone2.html')">
+    <div class="dropzone-inner">
+      <div class="dropzone-front">
+          <h2>Dropzone 5</h2>
+          <p>Description de la dropzone 5.</p>
+          <p>Cliquez pour en savoir plus</p>
+      </div>
+      <div class="dropzone-back">
+        <!-- Informations supplémentaires sur la dropzone -->
+      <p>Informations supplémentaire</p>
+      <p>Avion : Pilatus PC6 + Twin Otter</p>
+      <p>Installations: Piscine, logement, etc.</p>
+      </div>
     </div>
+</div>
 
+<div class="dropzone-card" onclick="openModal('dropzone2.html')">
+    <div class="dropzone-inner">
+      <div class="dropzone-front">
+          <h2>Dropzone 6</h2>
+          <p>Description de la dropzone 6.</p>
+          <p>Cliquez pour en savoir plus</p>
+      </div>
+      <div class="dropzone-back">
+        <!-- Informations supplémentaires sur la dropzone -->
+      <p>Informations supplémentaire</p>
+      <p>Avion : Pilatus PC6 + Twin Otter</p>
+      <p>Installations: Piscine, logement, etc.</p>
+      </div>
+    </div>
+</div>
+  
+
+</div>
     <!-- Fenêtre modale -->
     <div id="myModal" class="modal">
         <div class="modal-content">
