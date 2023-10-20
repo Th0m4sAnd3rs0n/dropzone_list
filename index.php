@@ -32,9 +32,9 @@
         <!-- Dropzones -->
         <!-- Redirection à l'aide d'un script pour ne pas avoir à imbriquer la carte dans un lien a et rendre toute la carte cliquable -->
         
-        <?php foreach($dropzones as $dz) : ?>
+        <?php foreach($dropzones as $indice=> $dz) : ?>
         
-        <div class="dropzone-card" onclick="openModal('dropzone2.html')">
+        <div class="dropzone-card" onclick="openModal('dropzone.php?dropzone=<?php echo $indice;?>')">
             <div class="dropzone-inner">
               <div class="dropzone-front">
                     <h2><?php echo $dz['name'];?></h2>
