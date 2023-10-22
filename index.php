@@ -45,9 +45,8 @@
                 <!-- Informations supplémentaires sur la dropzone -->
                     <p>Informations supplémentaire</p>
                     <p>Avion : <?php echo $dz['planes'];?></p>
-                    <p>Tarif: <?php echo $dz['tarif'];?></p>
-                    <div class="barre-de-vie">
-                        <div class="remplissage" id="barreVie"></div>
+                    <div class="container">
+                        <div class="barre prix">Tarif: <?php echo $dz['tarif'];?></div>
                     </div>
               </div>
             </div>

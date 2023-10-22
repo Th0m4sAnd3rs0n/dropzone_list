@@ -98,17 +98,21 @@ h1 {
     border: none;
 }
 
-.barre-de-vie {
-    width: 300px;
-    height: 20px;
-    background-color: #ccc; /* Couleur de fond */
-    border: 2px solid #000;
-    border-radius: 5px;
-    overflow: hidden;
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
 }
 
-.remplissage {
-    height: 100%;
-    background-color: green; /* Couleur de remplissage verte */
-    transition: width 0.3s; /* Ajout d'une transition pour une animation fluide */
+.barre {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  padding-right: 10px;
+  color: white; /* White text color */
+}
+
+.prix {
+    width: 90%; 
+    background-color: #04AA6D;
 }
