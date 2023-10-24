@@ -126,3 +126,37 @@ h1 {
     background-color: #df5900;
     background-color: #df2100; */
 }
+
+/* Style de base pour le formulaire de recherche */
+form {
+  margin-top: 20px;
+  text-align: center; /* Centrer le formulaire */
+  position: relative;
+  left: 70px;
+}
+
+
+/* Style de la zone de recherche */
+input[type="text"] {
+  padding: 10px; /* Marge interne pour l'espace autour du texte */
+  font-size: 16px; /* Taille de la police */
+  border: 2px solid #ccc; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+/* Style du bouton de recherche */
+input[type="submit"] {
+  background-color: #b0b8bd; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  padding: 10px 20px; /* Marge interne pour l'espace autour du texte */
+  font-size: 16px; /* Taille de la police */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de la main au survol */
+  margin-left: 1%; 
+}
+
+/* Style du bouton de recherche au survol */
+input[type="submit"]:hover {
+  background-color: #4577a0; /* Couleur de fond au survol */
+}

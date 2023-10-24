@@ -14,6 +14,7 @@ if (!isset($_GET['dropzone']))
 }
 
 include_once 'dropzones.php';
+include_once 'functions.php';
 
 $dz_indice = $_GET['dropzone']; 
 // Vérifier que le paramètre transmis est bien valide

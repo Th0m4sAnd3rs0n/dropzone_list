@@ -9,7 +9,7 @@
 
 <body>
     
- <!-- inclusion des variables et fonctions -->
+ <!-- Import des variables et fonctions -->
  <?php
             include_once('dropzones.php');
             include_once('functions.php');
@@ -18,9 +18,17 @@
     <!-- Bandeau de présentation -->
     <header>
         <h1>DZ list</h1>
-        <p>Comparez les dropzones francaise</p>
-    </header>
+        <p><em>Comparez les dropzones francaise</em></p>
 
+    <!-- Barre de recherche -->
+        <form method="post" action="recherche.php">
+
+            <input type="text" name="dz_recherche" placeholder="Rechercher une DZ">
+            <input type="submit" value="Rechercher">
+    
+        </form>
+    
+    </header>
      <!-- Sélecteur pour le type de vue -->
      <select class="view-selector" onchange="changeView(this)" autocomplete="off">
         <option value="mosaic">Mozaïque</option>
