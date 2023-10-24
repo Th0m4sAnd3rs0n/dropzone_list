@@ -102,6 +102,7 @@ h1 {
 .container {
   width: 100%; /* Full width */
   background-color: #ddd; /* Grey background */
+
 }
 
 .barre {
@@ -113,6 +114,15 @@ h1 {
 }
 
 .prix {
-    width: 90%; 
-    background-color: #04AA6D;
+    width: var(--largeurPrix); 
+    background-color: var(--couleurPrix);
+    
+    /* Dégradé de couleur utilisé
+    background-color: #13df00;
+    background-color: #6cdf00;
+    background-color: #a4df00;
+    background-color: #dfdb00;
+    background-color: #df8600;
+    background-color: #df5900;
+    background-color: #df2100; */
 }

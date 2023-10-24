@@ -32,7 +32,7 @@
         <!-- Dropzones -->
         <!-- Redirection à l'aide d'un script pour ne pas avoir à imbriquer la carte dans un lien a et rendre toute la carte cliquable -->
         
-        <?php foreach($dropzones as $indice=> $dz) : ?>
+        <?php foreach($dropzones as $indice => $dz) : ?>
         
         <div class="dropzone-card" onclick="openModal('dropzone.php?dropzone=<?php echo $indice;?>')">
             <div class="dropzone-inner">
@@ -45,8 +45,11 @@
                 <!-- Informations supplémentaires sur la dropzone -->
                     <p>Informations supplémentaire</p>
                     <p>Avion : <?php echo $dz['planes'];?></p>
+                    <p> Prix du saut : </p>
                     <div class="container">
-                        <div class="barre prix">Tarif: <?php echo $dz['tarif'];?></div>
+                        <!-- La largeur et la couleur de la barre est gérée dans une fonction PHP -->
+                        
+                        <div class="barre prix" style="<?php echo styleBarrePrix($dz['tarif'])?>"><?php echo $dz['tarif'];?> € </div>
                     </div>
               </div>
             </div>

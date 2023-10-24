@@ -1,36 +1,40 @@
 <?php
 // functions.php
 
-function isValidRecipe(array $recipe) : bool
+function styleBarrePrix(int $prix) : string
 {
-    if (array_key_exists('is_enabled', $recipe)) {
-        $isEnabled = $recipe['is_enabled'];
-    } else {
-        $isEnabled = false;
-    }
 
-    return $isEnabled;
+$remplissagebarre = 200 - 5*$prix;
+
+// Gestion du dégradé de couleur 
+if ($remplissagebarre>90) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #13df00;";
 }
-
-function displayAuthor(string $authorEmail, array $users) : string
-{
-    for ($i = 0; $i < count($users); $i++) {
-        $author = $users[$i];
-        if ($authorEmail === $author['email']) {
-            return $author['full_name'] . '(' . $author['age'] . ' ans)';
-        }
-    }
+elseif ($remplissagebarre>80) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: ##6cdf00;";
 }
-
-function getRecipes(array $recipes) : array
-{
-    $validRecipes = [];
-
-    foreach($recipes as $recipe) {
-        if (isValidRecipe($recipe)) {
-            $validRecipes[] = $recipe;
-        }
-    }
-
-    return $validRecipes;
+elseif ($remplissagebarre>70) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #a4df00;";
+}
+elseif ($remplissagebarre>60) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #dfdb00;";
+}
+elseif ($remplissagebarre>50) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df8600;";
+}
+elseif ($remplissagebarre>40) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df5900;";
+}
+elseif ($remplissagebarre>30) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df2100;";
+}
+elseif ($remplissagebarre>20) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df2100;";
+}
+elseif ($remplissagebarre>10) {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df2100;";
+}
+else {
+    return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df2100;";
+}
 }

@@ -6,7 +6,7 @@
 <?php
 
 // vérifier la présence d'un paramètre transmis dans l'URL 
-if (!isset($_GET['dropzone']) || empty($_GET['dropzone']))
+if (!isset($_GET['dropzone']))
 {
 	echo('Pas de nom de dropzone transmis');
 	// Arrête l'exécution de PHP

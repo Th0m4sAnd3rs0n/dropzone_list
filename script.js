@@ -1,3 +1,5 @@
+// Fonctions
+
 function Redirection(path) {
     location.href = path;
 }
@@ -21,37 +23,34 @@ function changeView(select) {
     const mosaic = document.querySelector(".mosaic");
 
     if (view === "mosaic") {
-        // mosaic.style.flexDirection = "row";
+        location.href = "index.php";
     } else if (view === "map") {
-        location.href = "map.html";
+        location.href = "map.php";
     }
 }
 
 
-// Fonction pour mettre à jour la barre de vie en fonction de la valeur
-function updateBarreDeVie(valeur) {
-    // Mettre à jour la largeur du remplissage en fonction de la valeur
-    const barreVie = document.getElementById("barreVie");
-    barreVie.style.width = valeur + "%";
 
-    // Utiliser une échelle de couleurs en fonction de la valeur
-    if (valeur < 30) {
-        barreVie.style.backgroundColor = "red";
-    } else if (valeur < 50) {
-        // Jaune pour les valeurs intermédiaires
-        barreVie.style.backgroundColor = "yellow";
-    } else if (valeur < 70) {
-        // Jaune pour les valeurs intermédiaires
-        barreVie.style.backgroundColor = "blue";
-    } else {
-        // Vert pour les valeurs élevées
-        barreVie.style.backgroundColor = "green";
-    }
+        // Initialisation de la carte
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 0, lng: 0 }, // Coordonnées du centre de la carte
+                zoom: 2 // Niveau de zoom initial
+            });
 
-}
+            // Ajout des marqueurs pour chaque Dropzone
+            dropzone.forEach((dz,index) => {
 
-//----------------- lancé au chargement de la page --------------------
-
-document.addEventListener("DOMContentLoaded", updateBarreDeVie(30) );
-
-
+                const marker = new google.maps.Marker({
+                    position: { lat: dz.coord_lat, lng: dz.coord_lon},
+                    map: map,
+                    title: dz.name
+                });
+                
+                // Ajoutez un événement de clic pour chaque marqueur
+                marker.addListener("click", () => {
+                    // Redirigez l'utilisateur vers la page de détails de la Dropzone
+                    window.location.href = "dropzone.php?dropzone=" + index.toString();
+                });
+            });
+        }
