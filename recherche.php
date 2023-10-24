@@ -3,6 +3,7 @@
 <head>
     <title>Résultats de la recherche</title>
 </head>
+
 <body>
     <h1>Résultats de la recherche</h1>
 
@@ -12,7 +13,7 @@
     include_once('dropzones.php');
     include_once('functions.php');
 
-
+    // Si une variable est transmise dans l'url
     if (isset($_POST['dz_recherche'])) {
         $recherche = $_POST['dz_recherche'];
         $resultats = array();
@@ -24,9 +25,11 @@
             }
         }
 
+        //Si aucune correspondance n'existe
         if (empty($resultats)) {
             echo "Aucun résultat trouvé pour : " . htmlspecialchars($recherche);
         } else {
+            //Affichage des resultats sous forme de liste de liens cliquables
             echo "<ul>";
             foreach ($resultats as $indice_dz) {
                 echo '<li><a href="dropzone.php?dropzone=' . $indice_dz . '">' . htmlspecialchars($dropzones[$indice_dz]['name']) .'</a></li>';

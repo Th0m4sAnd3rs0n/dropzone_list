@@ -1,9 +1,12 @@
 <?php
-// functions.php
+// Fonctions PHP
 
 //Ajustement du style des barres de prix en fonction des paramètre d'entrée
 function styleBarrePrix(int $prix) : string {
+
+    // Style remplissage barre : 100% = 20E, 0% = 40E
 $remplissagebarre = 200 - 5*$prix;
+
 // Gestion du dégradé de couleur 
 if ($remplissagebarre>90) {
     return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #13df00;";
@@ -36,3 +39,5 @@ else {
     return "--largeurPrix: ".$remplissagebarre."%; --couleurPrix: #df2100;";
 }
 }
+
+?>

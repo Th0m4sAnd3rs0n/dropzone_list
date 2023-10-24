@@ -1,7 +1,7 @@
 
 <?php
 
-//Liste de toute les DZ, l'idée est de tout stocker dans une DB à terme 
+//Liste de toute les DZ, l'idée est de tout stocker dans une DB à terme mais pour commencer le Frontend ça suffis
 
 $dropzones = [
     [
@@ -41,4 +41,5 @@ $dropzones = [
     ],
 ];
 
+?>
 
